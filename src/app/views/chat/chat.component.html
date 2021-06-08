@@ -1,0 +1,35 @@
+<div class="container-fluid h-100">
+  <div class="row justify-content-center h-100">
+    <div class="col-md-8 col-xl-6 chat">
+      <div class="card">
+        <div class="card-header msg_head">
+          <div class="d-flex bd-highlight">
+            <div class="user_info">
+              <span>Chat with {{chatBotName}}</span>
+              <p>{{messages.length}} Messages</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-body msg_card_body chat-body">
+          <div class="d-flex mb-4 message" [ngClass]="msg.sender ? 'start' : 'end'"
+               *ngFor="let msg of messages ">
+            <div [ngClass]="msg.sender ? 'msg-container-user': 'msg-container-chatBot' ">
+              {{msg.data}}
+            </div>
+            <div class="msg_time">{{msg.date}}</div>
+
+          </div>
+        </div>
+        <div class="card-footer">
+          <form class="input-group" [formGroup]="formGroup">
+            <input class="form-control type_msg" type="text" matInput formControlName="message"
+                   placeholder="Type your message...">
+            <button mat-icon-button color="primary" (click)="sendMessage()">
+              <mat-icon>send</mat-icon>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

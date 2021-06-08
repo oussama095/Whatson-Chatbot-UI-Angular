@@ -1,0 +1,19 @@
+.message {
+
+  flex-direction: column;
+  width: fit-content;
+}
+
+.start {
+  align-items: flex-start;
+}
+
+.end {
+  width: 100%;
+  align-items: flex-end;
+}
+
+.chat-body{
+  display: flex;
+  flex-direction: column-reverse;
+}
