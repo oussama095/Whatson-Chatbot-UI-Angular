@@ -4,7 +4,7 @@ import {ChatComponent} from './views/chat/chat.component';
 import {LoginComponent} from './views/login/login.component';
 
 const routes: Routes = [
-  // {path: '/', redirectTo: '/login', pathMatch: 'full'},
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: ChatComponent},
   {path: 'login', component: LoginComponent}
 
